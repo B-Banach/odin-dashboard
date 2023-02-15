@@ -1,0 +1,460 @@
+/* === VARIABLES === */
+:root {
+    /* colors */
+    --clr-light: #FFFFFF;
+    --clr-dark: #101010;
+    --clr-primary: #1992D4;
+    --clr-secondary: #ecc66c;
+    --clr-secondary-action: #b38d37;
+    --clr-accent: #0f577e;
+    --clr-background: #E2E8F0;
+    --clr-p: #4e4e4e;
+
+    /* font-size */
+    --fs-s: 0.875rem;
+    --fs-m: 1rem;
+    --fs-l: 1.5rem;
+    --fs-xl: 3rem;
+
+    /* font family */
+    --ff-lobster: 'Lobster', cursive, sans-serif;
+    --ff-montserrat: 'Montserrat', sans-serif;
+    --ff-roboto: 'Roboto', sans-serif;
+    --ff-zeyada: 'Zeyada', cursive, sans-serif;
+
+    /* font weight */
+    --fw-light: 300;
+    --fw-medium: 400;
+    --fw-bold: 700;
+
+    --transition-time: 0.5s;
+    --transition-time-slow: 1s;
+}
+
+/* === CSS RESET === */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* === GENERAL STYLING === */
+
+html {
+    font-family: var(--ff-roboto);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+p {
+    color: var(--clr-p);
+}
+
+input[type="text"] {
+    background-color: var(--clr-background);
+    border-color: #FFFFFF00;
+    border-radius: 50em;
+    padding-inline: 1em;
+    width: 80%;
+    min-width: 150px;
+}
+
+/* sections background colors */
+.side-bar {
+    background-color: var(--clr-primary);
+}
+
+header {
+    background-color: var(--clr-light);
+}
+
+main {
+    background-color: var(--clr-background);
+}
+
+section {
+    background-color: var(--clr-background);
+}
+
+img {
+    min-height: 20px;
+}
+
+/* ===  CLASSES === */
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.no-shrink {
+    flex-shrink: 0;
+}
+
+.grid {
+    display: grid;
+}
+
+.btn {
+    color: var(--clr-light);
+    font-weight: var(--fw-bold);
+    border: none;
+    padding: 0.5em 2em;
+    border-radius: 25em;
+    cursor: pointer;
+    background-color: var(--clr-primary);
+    transition: var(--transition-time);
+}
+
+.btn-shadow {
+    box-shadow: 12px 12px 30px 1px rgba(0, 0, 0, 0.21);
+    -webkit-box-shadow: 12px 9px 30px 1px rgba(0, 0, 0, 0.21);
+    -moz-box-shadow: 12px 12px 30px 1px rgba(0, 0, 0, 0.21);
+}
+
+
+.btn:hover {
+    background-color: var(--clr-accent);
+    transform: translateY(-5px);
+}
+
+.icon {
+    border: #FFFFFF00 1px solid;
+    padding: 0.5em;
+    border-radius: 50em;
+    cursor: pointer;
+    transition: var(--transition-time);
+    background-color: var(--clr-light);
+}
+
+.icon:hover {
+    transform: scale(1.3);
+}
+
+.shadow {
+    box-shadow: 0px 19px 19px -7px rgba(0, 0, 0, 0.21);
+    -webkit-box-shadow: 0px 19px 12px -7px rgba(0, 0, 0, 0.21);
+    -moz-box-shadow: 0px 19px 12px -7px rgba(0, 0, 0, 0.21);
+    z-index: 1;
+}
+
+.box-shadow {
+    box-shadow: 19px 19px 12px -7px rgba(0, 0, 0, 0.21);
+    -webkit-box-shadow: 19px 19px 12px -7px rgba(0, 0, 0, 0.21);
+    -moz-box-shadow: 19px 19px 12px -7px rgba(0, 0, 0, 0.21);
+}
+
+/* animations */
+
+/* underline animation */
+.underline-animation {
+    position: relative;
+}
+
+.underline-animation::after {
+    content: "";
+    position: absolute;
+    background-color: var(--clr-dark);
+    height: 2px;
+    width: 0px;
+    left: 0;
+    bottom: 0px;
+    transition: var(--transition-time);
+}
+
+.underline-animation:hover::after {
+    width: 100%;
+}
+
+/* ===  LAYOUT === */
+
+/* ---main layout--- */
+
+.main-grid {
+    grid-template-columns: 16em 1fr;
+}
+
+/* ---side-bar layout--- */
+
+.side-bar {
+    padding: 1em 0 1em 1em;
+    color: var(--clr-dark);
+    font-weight: var(--fw-bold);
+}
+
+.logo {
+    color: var(--clr-dark);
+    display: flex;
+    align-items: center;
+    margin-bottom: 2em;
+    font-size: var(--fs-l);
+    font-weight: var(--fw-bold);
+}
+
+.logo img {
+    max-width: 25%;
+}
+
+/* side navbar list*/
+
+nav li a {
+    display: flex;
+    align-items: center;
+    padding-block: 0.5em;
+    transition: var(--transition-time);
+}
+
+nav li a:hover,
+nav li a:active {
+    background-color: var(--clr-accent);
+    margin-left: 2em;
+}
+
+nav li a>*:first-child {
+    margin-right: 1em;
+}
+
+nav li:nth-child(6) {
+    margin-bottom: 3em;
+}
+
+/* ---section layout--- */
+
+section {
+    min-height: 100vh;
+    grid-template-rows: min-content 1fr;
+}
+
+header {
+    padding: 1em 2em;
+}
+
+header button,
+header input {
+    margin-right: 1em;
+}
+
+.profile-picture {
+    width: 2.5em;
+    margin-right: 1em;
+    transition: var(--transition-time-slow);
+}
+
+.profile-picture-large {
+    width: 5em;
+    margin-right: 1em;
+    transition: var(--transition-time-slow);
+}
+
+.profile-picture:hover {
+    transform: rotate(360deg) scale(1.2);
+}
+
+.top-bar {
+    justify-content: space-between;
+}
+
+.top-bar>div:nth-child(2) {
+    justify-content: flex-end;
+}
+
+.top-bar>div {
+    flex: 1 1 100%;
+}
+
+.user-name {
+    color: var(--clr-dark);
+    font-family: var(--ff-lobster);
+    font-size: var(--fs-l);
+    cursor: pointer;
+}
+
+.user-nick {
+    font-weight: var(--fw-bold);
+}
+
+.bottom-bar {
+    justify-content: space-between;
+    padding-top: 1em;
+}
+
+.bottom-bar>* {
+    flex: 1 1 100%;
+}
+
+.bottom-bar .flex:nth-child(2) {
+    justify-content: flex-end;
+}
+
+
+main {
+    padding: 1em;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: min-content 1fr;
+    column-gap: 1em;
+}
+
+h2 {
+    font-size: calc(1em + 3px);
+    padding: 1em 0em;
+}
+
+h3 {}
+
+.projects-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2.5em;
+    padding-right: 1em;
+    padding-bottom: 2em;
+}
+
+.project-container {
+    padding: 2em 1em;
+    background-color: var(--clr-light);
+    border-radius: 1em;
+    border-left: var(--clr-secondary) 1em solid;
+    transition: var(--transition-time);
+}
+
+.project-container:hover {
+    border-left: var(--clr-secondary-action) 1.2em solid;
+    transform: scale(1.01);
+    box-shadow: 32px 29px 29px -7px rgba(0, 0, 0, 0.21);
+    -webkit-box-shadow: 32px 29px 29px -7px rgba(0, 0, 0, 0.21);
+    -moz-box-shadow: 32px 29px 29px -7px rgba(0, 0, 0, 0.21);
+}
+
+.project-container>p {
+    margin-bottom: 2em;
+    padding-right: 2em;
+}
+
+.project-actions {
+    justify-content: flex-end;
+}
+
+.project-actions button {
+    margin-right: 1em;
+}
+
+.announcements-container {
+    padding: 2em 2em;
+    background-color: var(--clr-light);
+    border-radius: 1em;
+    font-size: var(--fs-s);
+}
+
+.trending-container {
+    padding: 2em 1em;
+    background-color: var(--clr-light);
+    border-radius: 1em;
+}
+
+.announcement {
+    padding-block: 1.5em;
+    border-bottom: var(--clr-background) 1px solid;
+}
+
+.announcement:last-child {
+    border-bottom: none;
+}
+
+.trending {
+    padding-left: 1em;
+    padding-bottom: 1em;
+}
+
+.trending:last-child {
+    padding-bottom: 0em;
+}

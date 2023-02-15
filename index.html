@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@300;400;700&family=Roboto:wght@300;400;700&family=Zeyada&display=swap"
+        rel="stylesheet">
+    <!-- JS -->
+    <script src="app.js" defer></script>
+    <!-- Title -->
+    <title>Dashboard</title>
+</head>
+
+<body class="grid main-grid">
+    <div class="side-bar">
+        <div class="logo">
+            <img src="/icons/view-dashboard.svg" alt="Dashboard logo">
+            <h1>Dashboard</h1>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="icons/home.svg" aria-hidden="true" width="30px">
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="icons/account-card.svg" aria-hidden="true" width="30px">
+                        <span>Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="icons/message-reply.svg" aria-hidden="true" width="30px">
+                        <span>Message</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="icons/clock-time-four.svg" aria-hidden="true" width="30px">
+                        <span>History</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="icons/calendar-check.svg" aria-hidden="true" width="30px">
+                        <span>Tasks</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="icons/account-group.svg" aria-hidden="true" width="30px">
+                        <span>Communities</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="icons/cog.svg" aria-hidden="true" width="30px">
+                        <span>Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="icons/tooltip-question.svg" aria-hidden="true" width="30px">
+                        <span>Support</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="icons/security.svg" aria-hidden="true" width="30px">
+                        <span>Privacy</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <section class="grid">
+        <header class="shadow">
+            <div class="flex top-bar">
+                <div class="flex">
+                    <button class="icon no-shrink" id="search-btn">
+                        <img src="/icons/magnify.svg" alt="Search.">
+                    </button>
+                    <input type="text" name="search" id="search" for="search">
+                </div>
+                <div class="flex">
+                    <button class="icon no-shrink" id="notification-btn">
+                        <img src="/icons/bell-ring-outline.svg" alt="Notifications.">
+                    </button>
+                    <img class="profile-picture" src="/img/account-circle.svg" alt="Profile picture.">
+                    <div class="user-name underline-animation">Morgan Oakley</div>
+                </div>
+            </div>
+            <div class="bottom-bar flex">
+                <div class="flex">
+                    <img class="profile-picture-large" src="/img/account-circle.svg" alt="Profile picture">
+                    <div>
+                        <span>Hi there,</span>
+                        <div>
+                            <span class="user-name underline-animation">
+                                Morgan Oakley
+                            </span>
+                            <span class="user-nick">
+                                <a href="#">(@morgan)</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex">
+                    <button class="btn btn-shadow">New</button>
+                    <button class="btn btn-shadow">Upload</button>
+                    <button class="btn btn-shadow">Share</button>
+                </div>
+            </div>
+        </header>
+        <main class="grid">
+            <h2>Your Projects</h2>
+            <h2>Announcements</h2>
+            <div class="projects-container grid">
+                <div class="project-container flex-column box-shadow">
+                    <h3>Super Cool Project</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit.</p>
+                    <div class="flex project-actions">
+                        <button class="icon no-shrink">
+                            <img src="/icons/star-outline.svg" alt="Add to favorites.">
+                        </button>
+                        <button class="icon no-shrink">
+                            <img src="/icons/eye-plus-outline.svg" alt="Add to observed.">
+                        </button>
+                        <button class="icon no-shrink">
+                            <img src="/icons/share-variant-outline.svg" alt="Share.">
+                        </button>
+                    </div>
+                </div>
+                <div class="project-container flex-column box-shadow">
+                    <h3>Super Cool Project</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit.</p>
+                    <div class="flex project-actions">
+                        <button class="icon no-shrink">
+                            <img src="/icons/star-outline.svg" alt="Add to favorites.">
+                        </button>
+                        <button class="icon no-shrink">
+                            <img src="/icons/eye-plus-outline.svg" alt="Add to observed.">
+                        </button>
+                        <button class="icon no-shrink">
+                            <img src="/icons/share-variant-outline.svg" alt="Share.">
+                        </button>
+                    </div>
+                </div>
+                <div class="project-container flex-column box-shadow">
+                    <h3>Super Cool Project</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit.</p>
+                    <div class="flex project-actions">
+                        <button class="icon no-shrink">
+                            <img src="/icons/star-outline.svg" alt="Add to favorites.">
+                        </button>
+                        <button class="icon no-shrink">
+                            <img src="/icons/eye-plus-outline.svg" alt="Add to observed.">
+                        </button>
+                        <button class="icon no-shrink">
+                            <img src="/icons/share-variant-outline.svg" alt="Share.">
+                        </button>
+                    </div>
+                </div>
+                <div class="project-container flex-column box-shadow">
+                    <h3>Super Cool Project</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit.</p>
+                    <div class="flex project-actions">
+                        <button class="icon no-shrink">
+                            <img src="/icons/star-outline.svg" alt="Add to favorites.">
+                        </button>
+                        <button class="icon no-shrink">
+                            <img src="/icons/eye-plus-outline.svg" alt="Add to observed.">
+                        </button>
+                        <button class="icon no-shrink">
+                            <img src="/icons/share-variant-outline.svg" alt="Share.">
+                        </button>
+                    </div>
+                </div>
+                <div class="project-container flex-column box-shadow">
+                    <h3>Super Cool Project</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit.</p>
+                    <div class="flex project-actions">
+                        <button class="icon no-shrink">
+                            <img src="/icons/star-outline.svg" alt="Add to favorites.">
+                        </button>
+                        <button class="icon no-shrink">
+                            <img src="/icons/eye-plus-outline.svg" alt="Add to observed.">
+                        </button>
+                        <button class="icon no-shrink">
+                            <img src="/icons/share-variant-outline.svg" alt="Share.">
+                        </button>
+                    </div>
+                </div>
+                <div class="project-container flex-column box-shadow">
+                    <h3>Super Cool Project</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit.</p>
+                    <div class="flex project-actions">
+                        <button class="icon no-shrink">
+                            <img src="/icons/star-outline.svg" alt="Add to favorites.">
+                        </button>
+                        <button class="icon no-shrink">
+                            <img src="/icons/eye-plus-outline.svg" alt="Add to observed.">
+                        </button>
+                        <button class="icon no-shrink">
+                            <img src="/icons/share-variant-outline.svg" alt="Share.">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="message-bar flex-column">
+                <div class="announcements-container box-shadow">
+                    <div class="announcement">
+                        <h3>Site Maintenance</h3>
+                        <p> Adipisicing elit. Asperiores officiis reiciendis ad
+                            aliquam expedita iure voluptate sapiente odit corporis.</p>
+                    </div>
+                    <div class="announcement">
+                        <h3>Community Share Day</h3>
+                        <p>Lorem ipsum, amet consectetur adipisicing elit. Asperiores officiis reiciendis ad
+                            iure voluptate sapiente odit corporis.</p>
+                    </div>
+                    <div class="announcement">
+                        <h3>Updated Privacy Policy</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores officiis reiciendis ad
+                            aliquam expedita iure voluptate sapiente odit corporis.</p>
+                    </div>
+                </div>
+
+                <h2>Trending</h2>
+                <div class="trending-container box-shadow">
+                    <div class="trending flex">
+                        <img class="profile-picture" src="/img/account-circle.svg">
+                        <div>
+                            <div> <a href="#">@tegan</a></div>
+                            <p>World Peace Builder</p>
+                        </div>
+                    </div>
+                    <div class="trending flex">
+                        <img class="profile-picture" src="/img/account-circle.svg">
+                        <div>
+                            <div> <a href="#">@morgan</a></div>
+                            <p>World Peace Builder</p>
+                        </div>
+                    </div>
+                    <div class="trending flex">
+                        <img class="profile-picture" src="/img/account-circle.svg">
+                        <div>
+                            <div> <a href="#">@kendall</a></div>
+                            <p>World Peace Builder</p>
+                        </div>
+                    </div>
+                    <div class="trending flex">
+                        <img class="profile-picture" src="/img/account-circle.svg">
+                        <div>
+                            <div> <a href="#">@alex</a></div>
+                            <p>World Peace Builder</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </section>
+</body>
+
+</html>
