@@ -27,7 +27,7 @@
     --fw-medium: 400;
     --fw-bold: 700;
 
-    --transition-time: 0.5s;
+    --transition-time: 0.4s;
     --transition-time-slow: 1s;
 }
 
@@ -80,8 +80,7 @@ html:focus-within {
 body {
     min-height: 100vh;
     text-rendering: optimizeSpeed;
-    line-height: 1.5;
-}
+    line-height: 1.5;}
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
@@ -205,7 +204,7 @@ img {
 
 .btn:hover {
     background-color: var(--clr-accent);
-    transform: translateY(-5px);
+    transform: translateY(-3px);
 }
 
 .icon {
@@ -213,12 +212,13 @@ img {
     padding: 0.5em;
     border-radius: 50em;
     cursor: pointer;
-    transition: var(--transition-time);
+    transition: all var(--transition-time) ease-in-out;
     background-color: var(--clr-light);
 }
 
 .icon:hover {
     transform: scale(1.3);
+    backface-visibility: hidden;
 }
 
 .shadow {
@@ -232,6 +232,14 @@ img {
     box-shadow: 19px 19px 12px -7px rgba(0, 0, 0, 0.21);
     -webkit-box-shadow: 19px 19px 12px -7px rgba(0, 0, 0, 0.21);
     -moz-box-shadow: 19px 19px 12px -7px rgba(0, 0, 0, 0.21);
+}
+
+.grow { 
+transition: all var(--transition-time) ease-in-out;
+ }
+
+.grow:hover { 
+transform: scale(1.04); 
 }
 
 /* animations */
@@ -385,11 +393,9 @@ main {
 }
 
 h2 {
-    font-size: calc(1em + 3px);
+    font-size: 1.3em;
     padding: 1em 0em;
-}
-
-h3 {}
+}   
 
 .projects-container {
     grid-template-columns: repeat(2, 1fr);
@@ -408,8 +414,8 @@ h3 {}
 }
 
 .project-container:hover {
-    border-left: var(--clr-secondary-action) 1.2em solid;
-    transform: scale(1.01);
+    border-left: var(--clr-secondary-action) 1em solid;
+    /* transform: scale(1.01) translateZ(0); */
     box-shadow: 32px 29px 29px -7px rgba(0, 0, 0, 0.21);
     -webkit-box-shadow: 32px 29px 29px -7px rgba(0, 0, 0, 0.21);
     -moz-box-shadow: 32px 29px 29px -7px rgba(0, 0, 0, 0.21);
@@ -418,6 +424,7 @@ h3 {}
 .project-container>p {
     margin-bottom: 2em;
     padding-right: 2em;
+    max-width: 45ch;
 }
 
 .project-actions {
